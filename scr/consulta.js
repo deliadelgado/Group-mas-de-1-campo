@@ -3,9 +3,7 @@ db.equipo.aggregate([
 
     {$group:
         { _id:{ año: {$year: "$Fecha_fundación"}},
-        Comunidad_Autonoma: "$ComunidadAutonoma",
-        Club: "$Equipo",
-        Presupuesto: "$Presupuesto"
+        Comunidad_Autonoma: "$ComunidadAutonoma"
     },
         Antigüedad: {$subtract:["$año",2021] }
     },
